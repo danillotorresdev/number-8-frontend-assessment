@@ -202,3 +202,41 @@ Using **Server Components** in Next.js was a decision to reduce the amount of Ja
 
 - **Property Saving**: Users can save properties to view later.
 - **Saved Properties Display**: A modal shows all saved properties, with the option to remove them from the list.
+
+---
+## 8. Testing <a name="testing"></a>
+
+Due to a busy work schedule, I couldn’t commit to adding unit tests, integration tests, or making the layout fully responsive. However, I recommend setting up a testing framework with **Jest** and **React Testing Library** to ensure code quality and reliability. Here’s an outline of the suggested testing setup:
+
+- **Unit Tests**: Test individual components, ensuring they render correctly, handle props as expected, and manage state properly.
+- **Integration Tests**: Focus on testing how components interact, particularly forms and filters, which involve multiple inputs and interactions.
+- **End-to-End Tests**: Use a tool like **Cypress** to test the entire user flow from filtering listings to viewing details and saving properties.
+
+## 9. Deployment <a name="deployment"></a>
+
+The application has been deployed on [Vercel](https://vercel.com/), which is the recommended platform for deploying Next.js applications. Vercel optimizes for both server-side and static generation, making it suitable for this project. 
+
+To redeploy or view deployment settings, you can:
+
+1. Log into [Vercel](https://vercel.com/).
+2. Access the project, linked to the GitHub repository for automatic updates.
+3. Configure any environment variables in the Vercel dashboard as needed.
+4. Vercel will automatically handle builds and deploy changes when pushed to the main branch.
+
+**Live Version**: [https://number-8-frontend-assessment.vercel.app/](https://number-8-frontend-assessment.vercel.app/)
+
+## 10. Contributing <a name="contributing"></a>
+
+### Contribution Guidelines
+
+1. **Fork the Repository**: Create a fork of the repository.
+2. **Create a Feature Branch**: For each feature or bug fix, create a new branch:
+   ```bash
+   git checkout -b feature/my-new-feature
+   ```
+3. **Commit Your Changes**: Write clear and descriptive commit messages for each change:
+   ```bash
+   git commit -m "Add new feature: my-new-feature"
+   ```
+4. **Push and Open a Pull Request**: Push the branch to your forked repository and open a pull request to the main repository for review.
+
