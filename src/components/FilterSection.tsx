@@ -36,48 +36,33 @@ export function FilterSection({ onFilter }: Readonly<FilterSectionProps>) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center mb-4 p-4 bg-gray-100 rounded-lg shadow-md w-full"
+      className="flex flex- flex-wrap gap-4 items-center mb-4 md:justify-center pb-4"
     >
-      <div className="w-full">
-        <NumberInput
-          label="Bedrooms"
-          id="bedrooms"
-          name="bedrooms"
-          register={register("bedrooms", { valueAsNumber: true })}
-        />
-      </div>
+      <NumberInput
+        label="Bedrooms"
+        id="bedrooms"
+        name="bedrooms"
+        register={register("bedrooms", { valueAsNumber: true })}
+      />
+      <NumberInput
+        label="Bathrooms"
+        id="bathrooms"
+        name="bathrooms"
+        register={register("bathrooms", { valueAsNumber: true })}
+      />
+      <NumberInput
+        label="Parking"
+        id="parking"
+        name="parking"
+        register={register("parking", { valueAsNumber: true })}
+      />
+      <RangeInput
+        label="Price Range"
+        max={1000000}
+        onChange={handleMaxPriceChange}
+      />
 
-      <div className="w-full">
-        <NumberInput
-          label="Bathrooms"
-          id="bathrooms"
-          name="bathrooms"
-          register={register("bathrooms", { valueAsNumber: true })}
-        />
-      </div>
-
-      <div className="w-full">
-        <NumberInput
-          label="Parking"
-          id="parking"
-          name="parking"
-          register={register("parking", { valueAsNumber: true })}
-        />
-      </div>
-
-      <div className="w-full">
-        <RangeInput
-          label="Price Range"
-          max={1000000}
-          onChange={handleMaxPriceChange}
-        />
-      </div>
-
-      <div className="w-full sm:col-span-2 lg:col-span-1 flex justify-center mt-4">
-        <Button type="submit" className="w-full lg:w-auto">
-          Search
-        </Button>
-      </div>
+      <Button type="submit">Search</Button>
     </form>
   );
 }
